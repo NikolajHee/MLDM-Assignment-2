@@ -1,7 +1,7 @@
 Before doing any actual work on our dataset we start of by partitioning off $\approx 5\%$ of the full dataset as to have a validation set that hasnt been seen by any of the models during training, neither as a target or input. This is done to ensure proper validation. \color[red]{den her ide er scrapped for nu}
 
 \section{Regression}
-For the first half of this assignment we will try an use regression to predict the "refractive index - RI" of the glass given the chemical components contained in our dataset.\\
+For the first half of this assignment we will use regression to predict the \textit{refractive index} - \texttt{RI} of the glass given the chemical components contained in our dataset.\\
 We will start of by just doing forward feature selection using k-fold cross-validation, such that we get the best variables for our linear regression, and reduce the chance of our model overfitting.\\
 \begin{figure}[H]
     \centering
@@ -24,4 +24,3 @@ Again its worth noting that for every K-fold run we test, we tend to get differe
 
 To understand how the model now do the regression we can simply look at the corresponding weights of the optimal $\lambda$.(We have chosen not to include that weights themselfs as they change too much over each run).\\We these values we simply linearly apply them to an new data observation as a matter of matrix multiplication and as such calculate the regression target "RI" using these.\\
 \\
-To test the 2 prevoius methods against each other 
